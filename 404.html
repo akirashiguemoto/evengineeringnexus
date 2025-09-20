@@ -6,17 +6,89 @@
   <title>Page not found — EV Engineering Nexus</title>
   <link rel="stylesheet" href="./style.css">
   <style>
-    .nf-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:48px;}
-    .nf h1{font-family:Bricolage Grotesque;font-weight:800;font-size:84px;letter-spacing:-2px;margin:0;}
-    .nf p{opacity:.8;margin:8px 0 20px;}
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(140% 100% at 15% 0%, rgba(0, 169, 255, 0.32), transparent 58%),
+        radial-gradient(120% 90% at 85% 0%, rgba(24, 70, 135, 0.38), transparent 65%),
+        var(--brand-background);
+      color: var(--brand-text-primary);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .nf-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(40px, 8vw, 96px);
+    }
+
+    .nf {
+      background: var(--brand-surface-elevated);
+      border: 1px solid var(--brand-border);
+      border-radius: 28px;
+      padding: clamp(40px, 8vw, 72px) clamp(32px, 8vw, 88px);
+      text-align: center;
+      box-shadow: 0 45px 120px rgba(1, 11, 24, 0.75);
+      max-width: 520px;
+    }
+
+    .nf-logo {
+      width: 82px;
+      margin: 0 auto 24px;
+      display: block;
+      filter: drop-shadow(0 0 28px var(--brand-glow));
+    }
+
+    .nf h1 {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800;
+      font-size: clamp(58px, 12vw, 92px);
+      letter-spacing: -2px;
+      margin: 0 0 12px;
+      color: var(--dl-color-theme-primary2);
+    }
+
+    .nf p {
+      color: var(--brand-text-secondary);
+      margin: 0 0 28px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .nf-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .nf-actions .thq-button-filled,
+    .nf-actions .thq-button-outline {
+      border-radius: 999px;
+      padding: 0.65rem 1.6rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .nf-actions .thq-button-outline {
+      border-color: rgba(53, 199, 255, 0.6);
+      background-color: rgba(0, 169, 255, 0.08);
+      color: var(--brand-text-primary);
+    }
   </style>
 </head>
 <body>
   <div class="nf-wrap">
     <div class="nf">
+      <img src="assets/brand-mark.svg" alt="EV Engineering Nexus logo" class="nf-logo">
       <h1>404</h1>
       <p>Sorry, we couldn't find that page.</p>
-      <div style="display:flex;gap:12px;justify-content:center;">
+      <div class="nf-actions">
         <a class="thq-button-filled" href="/">Go home</a>
         <a class="thq-button-outline" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">Watch videos</a>
       </div>

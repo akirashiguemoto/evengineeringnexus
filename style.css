@@ -5,12 +5,12 @@
   --dl-layout-size-medium: 96px;
   --dl-layout-size-xlarge: 192px;
   --dl-layout-size-xsmall: 16px;
-  --dl-color-theme-accent1: #C5B6E0;
-  --dl-color-theme-accent2: #8F84D2;
+  --dl-color-theme-accent1: #133058;
+  --dl-color-theme-accent2: #0A2142;
   --dl-layout-radius-round: 50%;
   --dl-layout-size-xxlarge: 288px;
-  --dl-color-theme-primary1: #23297F;
-  --dl-color-theme-primary2: #585AB3;
+  --dl-color-theme-primary1: #00A9FF;
+  --dl-color-theme-primary2: #35C7FF;
   --dl-layout-size-maxwidth: 1400px;
   --dl-layout-radius-radius2: 2px;
   --dl-layout-radius-radius4: 4px;
@@ -18,48 +18,74 @@
   --dl-layout-space-halfunit: 8px;
   --dl-layout-space-sixunits: 96px;
   --dl-layout-space-twounits: 32px;
-  --dl-color-theme-secondary1: #FFFFFF;
-  --dl-color-theme-secondary2: #FBF1EB;
+  --dl-color-theme-secondary1: #F5FBFF;
+  --dl-color-theme-secondary2: #CDEEFF;
   --dl-layout-space-fiveunits: 80px;
   --dl-layout-space-fourunits: 64px;
   --dl-layout-space-threeunits: 48px;
-  --dl-color-theme-neutral-dark: #080A45;
+  --dl-color-theme-neutral-dark: #E6F4FF;
   --dl-layout-radius-cardradius: 8px;
-  --dl-color-theme-neutral-light: #FFFFFF;
+  --dl-color-theme-neutral-light: #041326;
   --dl-layout-radius-imageradius: 8px;
   --dl-layout-radius-inputradius: 24px;
   --dl-layout-radius-buttonradius: 24px;
   --dl-layout-space-oneandhalfunits: 24px;
+  --brand-background: #010913;
+  --brand-background-alt: #041326;
+  --brand-surface: #0B1F3D;
+  --brand-surface-elevated: #10294A;
+  --brand-border: rgba(59, 209, 255, 0.22);
+  --brand-border-strong: rgba(59, 209, 255, 0.45);
+  --brand-text-primary: #E6F4FF;
+  --brand-text-secondary: rgba(230, 244, 255, 0.78);
+  --brand-accent: #00A9FF;
+  --brand-accent-strong: #35C7FF;
+  --brand-accent-soft: rgba(0, 169, 255, 0.16);
+  --brand-glow: rgba(0, 169, 255, 0.45);
+}
+
+body {
+  margin: 0;
+  color: var(--brand-text-primary);
+  background-color: var(--brand-background);
 }
  
 .button {
-  color: var(--dl-color-theme-neutral-dark);
+  color: var(--brand-text-primary);
   display: inline-block;
   padding: 0.5rem 1rem;
-  border-color: var(--dl-color-theme-neutral-dark);
+  border-color: var(--brand-border-strong);
   border-width: 1px;
-  border-radius: 4px;
-  background-color: var(--dl-color-theme-neutral-light);
+  border-radius: 8px;
+  background-color: var(--brand-surface);
+  transition: 0.3s ease;
 }
- 
+
+.button:hover {
+  background-color: var(--brand-surface-elevated);
+  border-color: var(--dl-color-theme-primary2);
+}
+
 .input {
-  color: var(--dl-color-theme-neutral-dark);
+  color: var(--brand-text-primary);
   cursor: auto;
   padding: 0.5rem 1rem;
-  border-color: var(--dl-color-theme-neutral-dark);
+  border-color: var(--brand-border-strong);
   border-width: 1px;
-  border-radius: 4px;
-  background-color: var(--dl-color-theme-neutral-light);
+  border-radius: 8px;
+  background-color: var(--brand-surface);
+  transition: 0.3s ease;
 }
- 
+
 .textarea {
-  color: var(--dl-color-theme-neutral-dark);
+  color: var(--brand-text-primary);
   cursor: auto;
   padding: 0.5rem;
-  border-color: var(--dl-color-theme-neutral-dark);
+  border-color: var(--brand-border-strong);
   border-width: 1px;
-  border-radius: 4px;
-  background-color: var(--dl-color-theme-neutral-light);
+  border-radius: 8px;
+  background-color: var(--brand-surface);
+  transition: 0.3s ease;
 }
  
 .list {
@@ -81,20 +107,26 @@
 }
  
 .thq-input {
-  color: var(--dl-color-theme-neutral-dark);
+  color: var(--brand-text-primary);
   cursor: auto;
   outline: none;
   padding: 0.5rem 1rem;
   align-self: stretch;
-  text-align: center;
-  border-color: var(--dl-color-theme-neutral-dark);
+  text-align: left;
+  border-color: var(--brand-border-strong);
   border-width: 1px;
   border-radius: var(--dl-layout-radius-inputradius);
-  background-color: var(--dl-color-theme-neutral-light);
+  background-color: var(--brand-surface-elevated);
+  transition: 0.3s ease;
 }
- 
+
+.thq-input::placeholder {
+  color: rgba(230, 244, 255, 0.55);
+}
+
 .thq-input:focus {
-  outline: 1px solid var(--dl-color-theme-primary1);
+  outline: 1px solid var(--dl-color-theme-primary2);
+  box-shadow: 0 0 0 3px rgba(0, 169, 255, 0.18);
 }
  
 .thq-button-filled {

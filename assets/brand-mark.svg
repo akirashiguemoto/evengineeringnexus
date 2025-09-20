@@ -1,0 +1,30 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="markGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(60 60) scale(54)">
+      <stop offset="0" stop-color="#35C7FF" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#00A9FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gearGradient" x1="32" y1="14" x2="88" y2="106" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4AD8FF"/>
+      <stop offset="1" stop-color="#0077FF"/>
+    </linearGradient>
+    <linearGradient id="boltGradient" x1="50" y1="28" x2="80" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F2FBFF"/>
+      <stop offset="1" stop-color="#6FD9FF"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="54" fill="url(#markGlow)" opacity="0.55"/>
+  <g fill="url(#gearGradient)">
+    <rect x="55" y="4" width="10" height="18" rx="3"/>
+    <rect x="55" y="4" width="10" height="18" rx="3" transform="rotate(45 60 60)"/>
+    <rect x="55" y="4" width="10" height="18" rx="3" transform="rotate(90 60 60)"/>
+    <rect x="55" y="4" width="10" height="18" rx="3" transform="rotate(135 60 60)"/>
+    <rect x="55" y="4" width="10" height="18" rx="3" transform="rotate(180 60 60)"/>
+    <rect x="55" y="4" width="10" height="18" rx="3" transform="rotate(225 60 60)"/>
+    <rect x="55" y="4" width="10" height="18" rx="3" transform="rotate(270 60 60)"/>
+    <rect x="55" y="4" width="10" height="18" rx="3" transform="rotate(315 60 60)"/>
+    <circle cx="60" cy="60" r="36"/>
+  </g>
+  <circle cx="60" cy="60" r="26" fill="#061C39"/>
+  <path d="M68 26L48 60H60L52 96L82 52H68L74 26H68Z" fill="url(#boltGradient)"/>
+</svg>
