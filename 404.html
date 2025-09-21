@@ -5,21 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found — EV Engineering Nexus</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Bricolage+Grotesque:wght@700;800&display=swap" rel="stylesheet">
   <style>
-    .nf-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:48px;}
-    .nf h1{font-family:Bricolage Grotesque;font-weight:800;font-size:84px;letter-spacing:-2px;margin:0;}
-    .nf p{opacity:.8;margin:8px 0 20px;}
+    :root {
+      --brand-navy-900: #020b1a;
+      --brand-navy-800: #041226;
+      --brand-surface: rgba(8, 22, 45, 0.88);
+      --brand-border: rgba(79, 210, 255, 0.38);
+      --brand-accent: #1FA8FF;
+      --brand-accent-soft: #4ED2FF;
+      --brand-text-strong: #f3fbff;
+      --brand-text-body: rgba(222, 236, 255, 0.9);
+      --brand-text-muted: rgba(172, 198, 229, 0.7);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(140% 140% at 12% 0%, rgba(78, 210, 255, 0.22), transparent 55%),
+        radial-gradient(120% 120% at 85% 15%, rgba(25, 120, 255, 0.14), transparent 60%),
+        var(--brand-navy-900);
+      color: var(--brand-text-body);
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 64px 24px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .nf-wrap {
+      width: 100%;
+      max-width: 520px;
+    }
+
+    .nf {
+      position: relative;
+      text-align: center;
+      padding: 48px 54px;
+      border-radius: 24px;
+      border: 1px solid var(--brand-border);
+      background: linear-gradient(160deg, var(--brand-surface) 0%, rgba(4, 15, 32, 0.92) 100%);
+      box-shadow: 0 36px 80px rgba(4, 16, 36, 0.6);
+      backdrop-filter: blur(10px);
+    }
+
+    .nf::before {
+      content: '';
+      position: absolute;
+      inset: -160px;
+      background: radial-gradient(60% 60% at 50% 20%, rgba(78, 210, 255, 0.25), transparent 70%);
+      z-index: -1;
+      filter: blur(6px);
+      opacity: 0.8;
+    }
+
+    .nf-logo {
+      width: 80px;
+      margin: 0 auto 24px;
+      display: block;
+      filter: drop-shadow(0 0 18px rgba(31, 168, 255, 0.5));
+    }
+
+    .nf h1 {
+      margin: 0 0 12px;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800;
+      font-size: 92px;
+      letter-spacing: -2px;
+      color: var(--brand-text-strong);
+      text-shadow: 0 18px 48px rgba(2, 9, 21, 0.75);
+    }
+
+    .nf p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--brand-text-body);
+    }
+
+    .nf-actions {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .nf-note {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--brand-text-muted);
+    }
+
+    .nf-note a {
+      color: var(--brand-accent-soft);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nf-note a:hover,
+    .nf-note a:focus-visible {
+      color: var(--brand-text-strong);
+    }
+
+    @media (max-width: 599px) {
+      body {
+        padding: 48px 16px;
+      }
+
+      .nf {
+        padding: 36px 32px;
+      }
+
+      .nf h1 {
+        font-size: 72px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="nf-wrap">
     <div class="nf">
+      <a href="/" aria-label="Return to the EV Engineering Nexus homepage">
+        <img src="assets/ev-engineering-nexus-mark.svg" alt="EV Engineering Nexus logo" class="nf-logo">
+      </a>
       <h1>404</h1>
-      <p>Sorry, we couldn't find that page.</p>
-      <div style="display:flex;gap:12px;justify-content:center;">
+      <p>Looks like this page drove off the map. Double-check the URL or head back to the garage.</p>
+      <div class="nf-actions">
         <a class="thq-button-filled" href="/">Go home</a>
         <a class="thq-button-outline" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">Watch videos</a>
       </div>
+      <div class="nf-note">Need a hand? <a href="mailto:hello@evengineeringnexus.com">hello@evengineeringnexus.com</a></div>
     </div>
   </div>
 </body>

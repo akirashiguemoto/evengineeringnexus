@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gearGradient" x1="16" y1="12" x2="68" y2="68" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5CD8FF"/>
+      <stop offset="1" stop-color="#1B7BFF"/>
+    </linearGradient>
+    <linearGradient id="boltGlow" x1="28" y1="16" x2="52" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#102C54"/>
+      <stop offset="1" stop-color="#06152B"/>
+    </linearGradient>
+  </defs>
+  <path d="M 63.44 34.86 L 71.70 35.62 L 71.70 44.38 L 63.44 45.14 L 60.21 52.94 L 65.51 59.31 L 59.31 65.51 L 52.94 60.21 L 45.14 63.44 L 44.38 71.70 L 35.62 71.70 L 34.86 63.44 L 27.06 60.21 L 20.69 65.51 L 14.49 59.31 L 19.79 52.94 L 16.56 45.14 L 8.30 44.38 L 8.30 35.62 L 16.56 34.86 L 19.79 27.06 L 14.49 20.69 L 20.69 14.49 L 27.06 19.79 L 34.86 16.56 L 35.62 8.30 L 44.38 8.30 L 45.14 16.56 L 52.94 19.79 L 59.31 14.49 L 65.51 20.69 L 60.21 27.06 Z" fill="url(#gearGradient)"/>
+  <circle cx="40" cy="40" r="20" fill="#03142A"/>
+  <path d="M45 18L29 42H36.5L26 62L44 38H36.5L45 18Z" fill="url(#boltGlow)"/>
+</svg>
