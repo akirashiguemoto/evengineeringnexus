@@ -271,6 +271,67 @@
       gap: 10px;
     }
 
+    .card--loading {
+      pointer-events: none;
+    }
+
+    .card--loading .pad {
+      gap: 12px;
+    }
+
+    .skeleton {
+      display: block;
+      width: 100%;
+      height: 16px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, rgba(31, 168, 255, 0.08), rgba(31, 168, 255, 0.24), rgba(31, 168, 255, 0.08));
+      background-size: 200% 100%;
+      animation: skeletonPulse 1.6s ease-in-out infinite;
+    }
+
+    .skeleton-thumb {
+      aspect-ratio: 16 / 9;
+      border-bottom: 1px solid rgba(79, 210, 255, 0.22);
+    }
+
+    .skeleton-pill {
+      width: 128px;
+      height: 24px;
+      border-radius: 999px;
+    }
+
+    .skeleton-title {
+      height: 20px;
+    }
+
+    .skeleton-title--short {
+      width: 72%;
+    }
+
+    .skeleton-meta {
+      height: 14px;
+      width: 54%;
+    }
+
+    @keyframes skeletonPulse {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
+    .video-card__meta {
+      font-size: 14px;
+      color: var(--brand-text-muted);
+    }
+
+    .video-error {
+      margin-top: 18px;
+      color: var(--brand-text-muted);
+    }
+
     .pill {
       align-self: flex-start;
       font-size: 12px;
@@ -656,32 +717,64 @@
   </section>
 
   <!-- LATEST VIDEOS -->
-  <section id="videos">
+  <section id="videos" data-video-section data-channel-handle="@EVEngineeringNexus" data-max-videos="3">
     <div class="container">
       <h2 class="thq-heading-2">Latest videos</h2>
-      <div class="grid">
-        <a class="card" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1623998021443-19f94b2074bf?auto=format&fit=crop&w=1200&q=60" alt="EV drivetrain thumbnail">
+      <div class="grid" data-video-grid>
+        <article class="card card--loading" data-video-skeleton aria-hidden="true">
+          <div class="skeleton skeleton-thumb"></div>
           <div class="pad">
-            <div class="pill">EV Tech Explained</div>
-            <div class="thq-heading-3">Inside a 3-in-1 e-axle: motor + inverter + gearbox</div>
+            <span class="skeleton skeleton-pill"></span>
+            <span class="skeleton skeleton-title"></span>
+            <span class="skeleton skeleton-title skeleton-title--short"></span>
+            <span class="skeleton skeleton-meta"></span>
           </div>
-        </a>
-        <a class="card" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c24?auto=format&fit=crop&w=1200&q=60" alt="Battery thumbnail">
+        </article>
+        <article class="card card--loading" data-video-skeleton aria-hidden="true">
+          <div class="skeleton skeleton-thumb"></div>
           <div class="pad">
-            <div class="pill">Future Mobility</div>
-            <div class="thq-heading-3">Solid-state batteries: separators, dendrites & fast-charge</div>
+            <span class="skeleton skeleton-pill"></span>
+            <span class="skeleton skeleton-title"></span>
+            <span class="skeleton skeleton-title skeleton-title--short"></span>
+            <span class="skeleton skeleton-meta"></span>
           </div>
-        </a>
-        <a class="card" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1544823431-c1b7d5dfcf15?auto=format&fit=crop&w=1200&q=60" alt="Regen thumbnail">
+        </article>
+        <article class="card card--loading" data-video-skeleton aria-hidden="true">
+          <div class="skeleton skeleton-thumb"></div>
           <div class="pad">
-            <div class="pill">EV Tech Explained</div>
-            <div class="thq-heading-3">Regenerative braking: how torque blending really works</div>
+            <span class="skeleton skeleton-pill"></span>
+            <span class="skeleton skeleton-title"></span>
+            <span class="skeleton skeleton-title skeleton-title--short"></span>
+            <span class="skeleton skeleton-meta"></span>
           </div>
-        </a>
+        </article>
       </div>
+      <p class="video-error thq-body-large" data-video-error role="status" hidden>Unable to load the latest videos right now. Please try again later.</p>
+      <noscript>
+        <div class="grid">
+          <a class="card" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1623998021443-19f94b2074bf?auto=format&fit=crop&w=1200&q=60" alt="EV drivetrain thumbnail">
+            <div class="pad">
+              <div class="pill">EV Tech Explained</div>
+              <div class="thq-heading-3">Inside a 3-in-1 e-axle: motor + inverter + gearbox</div>
+            </div>
+          </a>
+          <a class="card" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c24?auto=format&fit=crop&w=1200&q=60" alt="Battery thumbnail">
+            <div class="pad">
+              <div class="pill">Future Mobility</div>
+              <div class="thq-heading-3">Solid-state batteries: separators, dendrites & fast-charge</div>
+            </div>
+          </a>
+          <a class="card" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1544823431-c1b7d5dfcf15?auto=format&fit=crop&w=1200&q=60" alt="Regenerative braking thumbnail">
+            <div class="pad">
+              <div class="pill">EV Tech Explained</div>
+              <div class="thq-heading-3">Regenerative braking: how torque blending really works</div>
+            </div>
+          </a>
+        </div>
+      </noscript>
     </div>
   </section>
 
@@ -799,6 +892,7 @@
   </footer>
 </div>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="./videos.js"></script>
 <script src="./blog-posts.js"></script>
 <script src="./blog.js"></script>
 </body>
