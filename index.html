@@ -296,6 +296,21 @@
       box-shadow: 0 0 8px rgba(79, 210, 255, 0.6);
     }
 
+    .video-status {
+      margin-top: 14px;
+      color: var(--brand-text-body);
+      opacity: 0.9;
+    }
+
+    .video-status[data-youtube-error='true'] {
+      color: rgba(255, 200, 170, 0.92);
+    }
+
+    .video-meta {
+      color: var(--brand-text-muted);
+      font-size: 14px;
+    }
+
     .two-col {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
@@ -656,10 +671,10 @@
   </section>
 
   <!-- LATEST VIDEOS -->
-  <section id="videos">
+  <section id="videos" data-youtube-section data-channel-handle="@EVEngineeringNexus" data-max-videos="3">
     <div class="container">
       <h2 class="thq-heading-2">Latest videos</h2>
-      <div class="grid">
+      <div class="grid" data-youtube-grid>
         <a class="card" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">
           <img src="https://images.unsplash.com/photo-1623998021443-19f94b2074bf?auto=format&fit=crop&w=1200&q=60" alt="EV drivetrain thumbnail">
           <div class="pad">
@@ -682,6 +697,9 @@
           </div>
         </a>
       </div>
+      <noscript>
+        <p class="video-status" data-youtube-error="true">Enable JavaScript to see the latest uploads from YouTube.</p>
+      </noscript>
     </div>
   </section>
 
@@ -799,6 +817,7 @@
   </footer>
 </div>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="./videos.js"></script>
 <script src="./blog-posts.js"></script>
 <script src="./blog.js"></script>
 </body>
