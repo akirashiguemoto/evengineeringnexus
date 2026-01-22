@@ -233,6 +233,17 @@
       margin-top: 32px;
     }
 
+    .videos-empty {
+      margin-top: 24px;
+      color: var(--brand-text-body);
+    }
+
+    .videos-empty a {
+      color: var(--brand-accent);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
     .card {
       border: 1px solid var(--brand-border);
       border-radius: 16px;
@@ -659,29 +670,42 @@
   <section id="videos">
     <div class="container">
       <h2 class="thq-heading-2">Latest videos</h2>
-      <div class="grid">
-        <a class="card" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1623998021443-19f94b2074bf?auto=format&fit=crop&w=1200&q=60" alt="EV drivetrain thumbnail">
-          <div class="pad">
-            <div class="pill">EV Tech Explained</div>
-            <div class="thq-heading-3">Inside a 3-in-1 e-axle: motor + inverter + gearbox</div>
-          </div>
-        </a>
-        <a class="card" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c24?auto=format&fit=crop&w=1200&q=60" alt="Battery thumbnail">
-          <div class="pad">
-            <div class="pill">Future Mobility</div>
-            <div class="thq-heading-3">Solid-state batteries: separators, dendrites & fast-charge</div>
-          </div>
-        </a>
-        <a class="card" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1544823431-c1b7d5dfcf15?auto=format&fit=crop&w=1200&q=60" alt="Regen thumbnail">
-          <div class="pad">
-            <div class="pill">EV Tech Explained</div>
-            <div class="thq-heading-3">Regenerative braking: how torque blending really works</div>
-          </div>
-        </a>
-      </div>
+      <div
+        class="grid"
+        data-videos-grid
+        data-channel-handle="@EVEngineeringNexus"
+        data-channel-url="https://www.youtube.com/@EVEngineeringNexus"
+        data-videos-max="3"
+      ></div>
+      <p class="videos-empty thq-body-large" data-videos-empty hidden>
+        Unable to load the latest videos right now. Watch directly on
+        <a href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">YouTube</a>.
+      </p>
+      <noscript>
+        <div class="grid">
+          <a class="card" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1623998021443-19f94b2074bf?auto=format&amp;fit=crop&amp;w=1200&amp;q=60" alt="EV drivetrain thumbnail">
+            <div class="pad">
+              <div class="pill">EV Tech Explained</div>
+              <div class="thq-heading-3">Inside a 3-in-1 e-axle: motor + inverter + gearbox</div>
+            </div>
+          </a>
+          <a class="card" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c24?auto=format&amp;fit=crop&amp;w=1200&amp;q=60" alt="Battery thumbnail">
+            <div class="pad">
+              <div class="pill">Future Mobility</div>
+              <div class="thq-heading-3">Solid-state batteries: separators, dendrites &amp; fast-charge</div>
+            </div>
+          </a>
+          <a class="card" href="https://www.youtube.com/@EVEngineeringNexus" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1544823431-c1b7d5dfcf15?auto=format&amp;fit=crop&amp;w=1200&amp;q=60" alt="Regen thumbnail">
+            <div class="pad">
+              <div class="pill">EV Tech Explained</div>
+              <div class="thq-heading-3">Regenerative braking: how torque blending really works</div>
+            </div>
+          </a>
+        </div>
+      </noscript>
     </div>
   </section>
 
@@ -799,6 +823,7 @@
   </footer>
 </div>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="./videos.js"></script>
 <script src="./blog-posts.js"></script>
 <script src="./blog.js"></script>
 </body>
